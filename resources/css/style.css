@@ -1,0 +1,30 @@
+/* =============== RESETS =============== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============== GENERAL =============== */
+
+body {
+  background-color: #f3f3f3;
+  color: #555555;
+  font-family: "Lato";
+  font-size: 16px;
+}
+
+.italic {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.ref-link, .ref-link:visited {
+color: #ff896b;
+text-decoration: none;
+}
+
+.ref-link:hover, .ref-link:focus, .ref-link:active {
+  color: #e8d4b4;
+} 

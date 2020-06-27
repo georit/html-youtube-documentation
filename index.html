@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap"
         rel="stylesheet">
     <!-- ********** CSS ********** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <link rel="stylesheet" href="resources/css/style.css">
 
 </head>
@@ -27,13 +28,13 @@
 
     <div class="main-container">
 
-        <nav class="main-nav" id="navbar">
+        <nav class="main-nav animate__animated animate__fadeInLeftBig" id="navbar">
             <header class="nav-header">
                 <h2 class="small-heading">HTML YouTube Videos</h2>
             </header>
 
             <div class="nav-links">
-                <a href="#Struggling_with_video_formats&#63;" class="nav-link">Struggling with video formats&#63;</a>
+                <a href="#Struggling_with_video_formats?" class="nav-link">Struggling with video formats?</a>
                 <a href="#YouTube_Video_Id" class="nav-link">YouTube Video Id</a>
                 <a href="#Playing_a_YouTube_video_in_HTML" class="nav-link">Playing a YouTube video in HTML</a>
                 <a href="#YouTube_Autoplay" class="nav-link">YouTube Autoplay</a>
@@ -44,11 +45,11 @@
             </div>
         </nav>
 
-        <main id="main-doc">
+        <main class="main-content" id="main-doc">
 
-            <section class="main-section">
-                <header class="section-heading" id="Struggling_with_video_formats&#63;">
-                    <h2 class="small-heading">Struggling with video formats&#63;</h2>
+            <section class="main-section" id="Struggling_with_video_formats?">
+                <header class="section-heading">
+                    <h2 class="small-heading">Struggling with video formats?</h2>
                 </header>
 
                 <div class="content">
@@ -72,31 +73,39 @@
                 </div>
             </section>
 
-            <section class="main-section">
-                <header class="section-heading" id="Playing_a_YouTube_video_in_HTML">
+            <section class="main-section" id="Playing_a_YouTube_video_in_HTML">
+                <header class="section-heading">
                     <h2 class="small-heading">Playing a YouTube video in HTML</h2>
                 </header>
                 <div class="content">
-                    <p class="content-p">To play your video on a web page, do the following:</p>
-                    <ul class="play-steps">
-                        <li class="step">Upload the video to YouTube</li>
-                        <li class="step">Take a note of the video id</li>
-                        <li class="step">Define an <span class="italic">&lt;iframe&gt;</span> element in your web page
+                    <ul class="play">
+                        <li>To play your video on a web page, do the following:
+                            <ul class="play-steps">
+                                <li class="step">Upload the video to YouTube</li>
+                                <li class="step">Take a note of the video id</li>
+                                <li class="step">Define an <span class="italic">&lt;iframe&gt;</span> element in your
+                                    web page</li>
+                                <li class="step">Let the src attribute point to the video URL</li>
+                                <li class="step">Use the width and height attributes to specify the dimension of the
+                                    player</li>
+                                <li class="step">Add any other parameters to the URL (see below)</li>
+                            </ul>
                         </li>
-                        <li class="step">Let the src attribute point to the video URL</li>
-                        <li class="step">Use the width and height attributes to specify the dimension of the player</li>
-                        <li class="step">Add any other parameters to the URL (see below)</li>
                     </ul>
-                    <h3 class="example">Example</h3>
-                    <code class="code-exmpl">
-                        &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/z-RaVrMJDgs"&gt;
-                        &lt;&#47;iframe&gt;
-                    </code>
+                    <div class="exmpl-wrapper">
+                        <h3 class="example">Example</h3>
+                        <div class="code-exmpl">
+                            <code>
+                                &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/z-RaVrMJDgs"&gt;
+                                &lt;&#47;iframe&gt;
+                            </code>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="main-section">
-                <header class="section-heading" id="YouTube_Autoplay">
+            <section class="main-section" id="YouTube_Autoplay">
+                <header class="section-heading">
                     <h2 class="small-heading">YouTube Autoplay</h2>
                 </header>
 
@@ -104,82 +113,103 @@
                     <p class="content-p">You can have your video start playing automatically when a user visits that
                         page by
                         adding a simple parameter to your YouTube URL.</p>
-                    <p class="content-p content-note">Note: Take careful consideration when deciding to autoplay your
-                        videos. Automatically starting a video can annoy your visitor and end up causing more harm than
-                        good.</p>
+                    <div class="content-note">
+                        <p class="content-p">Note: Take careful consideration when deciding to autoplay your
+                            videos. Automatically starting a video can annoy your visitor and end up causing more harm
+                            than
+                            good.</p>
+                    </div>
                     <p class="content-p">Value 0 (default): The video will not play automatically when the player loads.
                     </p>
                     <p class="content-p">Value 1: The video will play automatically when the player loads.</p>
-                    <h3 class="example">YouTube &dash; Autoplay</h3>
-                    <code class="code-exmpl">
-                        &lt;iframe width="420" height="315"
-                        src="https://www.youtube.com/embed/z-RaVrMJDgs?autoplay=1"&gt;
-                        &lt;&#47;iframe&gt;
-                    </code>
+                    <div class="exmpl-wrapper">
+                        <h3 class="example">YouTube &dash; Autoplay</h3>
+                        <div class="code-exmpl">
+                            <code>
+                                &lt;iframe width="420" height="315"
+                                src="https://www.youtube.com/embed/z-RaVrMJDgs?autoplay=1"&gt;
+                                &lt;&#47;iframe&gt;
+                            </code>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="main-section">
-                <header class="section-heading" id="YouTube_Playlist">
+            <section class="main-section" id="YouTube_Playlist">
+                <header class="section-heading">
                     <h2 class="small-heading">YouTube Playlist</h2>
-
-                    <div class="content">
-                        <p class="content-p">A comma separated list of videos to play (in addition to the original URL).
-                        </p>
-                        <code class="code-exmpl">
-                            &lt;iframe width="420" height="315"
-                            src="https://www.youtube.com/embed/z-RaVrMJDgs?playlist=z-RaVrMJDgs,G5HrMreJopQ,IEFn7Mi0iYY,r68hU_6_TaM,zxLVAz214ug&loop=1"&gt;
-                            &lt;&#47;iframe&gt;
-                        </code>
-                    </div>
                 </header>
+
+                <div class="content">
+                    <p class="content-p">A comma separated list of videos to play (in addition to the original URL).
+                    </p>
+                    <div class="exmpl-wrapper">
+                        <h3 class="example">YouTube &dash; Playlist</h3>
+                        <div class="code-exmpl">
+                            <code>
+                                &lt;iframe width="420" height="315"
+                                src="https://www.youtube.com/embed/z-RaVrMJDgs?playlist=z-RaVrMJDgs,G5HrMreJopQ,IEFn7Mi0iYY,r68hU_6_TaM,zxLVAz214ug&loop=1"&gt;
+                                &lt;&#47;iframe&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section class="main-section">
-                <header class="section-heading" id="YouTube_Loop">
+            <section class="main-section" id="YouTube_Loop">
+                <header class="section-heading">
                     <h2 class="small-heading">YouTube Loop</h2>
                 </header>
 
                 <div class="content">
                     <p class="content-p">Value 0 (default): The video will play only once.</p>
                     <p class="content-p">Value 1: The video will loop (forever).</p>
-                    <h3 class="example">YouTube &dash; Loop</h3>
-                    <code class="code-exmpl">
-                        &lt;iframe width="420" height="315"
-                        src="https://www.youtube.com/embed/z-RaVrMJDgs?playlist=z-RaVrMJDgs&loop=1"&gt;
-                        &lt;&#47;iframe&gt;
-                    </code>
-                </div>
+                    <div class="exmpl-wrapper">
+                        <h3 class="example">YouTube &dash; Loop</h3>
+                        <div class="code-exmpl">
+                            <code>
+                                &lt;iframe width="420" height="315"
+                                src="https://www.youtube.com/embed/z-RaVrMJDgs?playlist=z-RaVrMJDgs&loop=1"&gt;
+                                &lt;&#47;iframe&gt;
+                            </code>
+                        </div>
+                    </div>
             </section>
 
-            <section class="main-section">
-                <header class="section-heading" id="YouTube_Controls">
+            <section class="main-section" id="YouTube_Controls">
+                <header class="section-heading">
                     <h2 class="small-heading">YouTube Controls</h2>
                 </header>
 
                 <div class="content">
                     <p class="content-p">Value 0: Player controls does not display.</p>
                     <p class="content-p">Value 1 (default): Player controls display.</p>
-                    <h3 class="example">YouTube &dash; Controls</h3>
-                    <code class="code-exmpl">
-                        &lt;iframe width="420" height="315"
-                        src="https://www.youtube.com/embed/z-RaVrMJDgs?controls=0"&gt;
-                        &lt;&#45;iframe&gt;
-                    </code>
+                    <div class="exmpl-wrapper">
+                        <h3 class="example">YouTube &dash; Controls</h3>
+                        <div class="code-exmpl">
+                            <code>
+                                &lt;iframe width="420" height="315"
+                                src="https://www.youtube.com/embed/z-RaVrMJDgs?controls=0"&gt;
+                                &lt;&#45;iframe&gt;
+                            </code>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="main-section">
-                <header class="section-heading" id="References">
+            <section class="main-section" id="References">
+                <header class="section-heading">
                     <h2 class="small-heading">References</h2>
-                    <div class="content">
-                        <p class="content-p">All the documentation used here can be found at <a
-                                href="https://www.w3schools.com/html/html_youtube.asp" class="ref-link">W3C Schools</a>
-                            and
-                            <a href="https://stackoverflow.com/questions/16114615/how-to-embed-youtube-videos-as-playlist"
-                                class="ref-link">Stack Overflow</a>.</p>
-                    </div>
                 </header>
+
+                <div class="content">
+                    <p class="content-p">All the documentation used on this page can be found at <a
+                            href="https://www.w3schools.com/html/html_youtube.asp" class="ref-link" target="_blank">W3C
+                            Schools</a>
+                        and
+                        <a href="https://stackoverflow.com/questions/16114615/how-to-embed-youtube-videos-as-playlist"
+                            class="ref-link" target="_blank">Stack Overflow</a>.</p>
+                </div>
             </section>
 
         </main>
@@ -190,5 +220,9 @@
     <script src="resources/js/script.js"></script>
 
 </body>
+
+<footer>
+    <p class="copy">Designed with ❤️ by George Mapaya. &copy 2020</p>
+</footer>
 
 </html>

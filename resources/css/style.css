@@ -19,9 +19,31 @@ body {
   font-size: 1.8rem;
 }
 
+.section-heading {
+  color: #2c2c2c;
+  margin-bottom: 1.5%;
+  text-transform: uppercase;
+}
+
+.content-p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  padding: 1% 0;
+}
+
+.example {
+  color: #2c2c2c;
+  font-size: 1.5;
+}
+
 .italic {
   font-style: italic;
   font-weight: 300;
+}
+
+.content-note {
+  background-color: #e8d4b4;
+  padding: 2%;
 }
 
 .ref-link,
@@ -62,8 +84,9 @@ body {
 }
 
 .big-heading {
-  font-size: 2rem;
-  padding-bottom: .5%;
+  color: #000000;
+  font-size: 2.5rem;
+  padding-bottom: 0.5%;
   text-transform: uppercase;
   position: relative;
 }
@@ -102,25 +125,31 @@ body {
 
 .main-container {
   width: 98%;
-  margin: 2% auto;
+  margin: 4% auto 2%;
   display: grid;
-  grid-column-gap: 2%;
+  grid-column-gap: 3%;
   grid-template-columns: 1fr 3fr;
+  position: relative;
 }
 
 /* === Main Navigation === */
 
 .main-nav {
-  background-color: #e8d4b4;
+  background-color: #f3f3f3;
   border: 2px solid #ff896b;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
-  height: 48vh;
-  /* position: fixed; */
+  height: 45vh;
+  box-shadow: 0 0 20px #d1d1d1;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 2%;
 }
+
+/* === Navigation heading === */
 
 .nav-header {
   background-color: #ff896b;
@@ -137,9 +166,12 @@ body {
 }
 
 .nav-header .small-heading {
+  color: #ebe6e6;
   font-size: 1.5rem;
-  letter-spacing: .02rem;
+  letter-spacing: 0.02rem;
 }
+
+/* === Navigation links === */
 
 .nav-links {
   display: flex;
@@ -147,17 +179,18 @@ body {
 }
 
 .nav-link {
-  color: #555555;
+  color: #222222;
   display: block;
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 2% 5%;
+  padding: 1.5% 5%;
   text-decoration: none;
-  transition: all .2s;
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  -ms-transition: all .2s;
-  -o-transition: all .2s;
+  text-transform: capitalize;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
   width: 100%;
 }
 
@@ -179,6 +212,68 @@ body {
   -o-transform: scale(1.02);
 }
 
+/* === Main content === */
+
+.main-content {
+  background-color: #f3f3f3;
+  border: 2px solid #f3f3f3;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  margin-right: 5%;
+  padding: 1% 5% 5% 5%;
+}
+
+/* === Sections === */
+
+.main-section {
+  margin-bottom: 10%;
+}
+
+.main-section:last-child {
+  margin-bottom: 1%;
+}
+
+.play {
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+
+.play li {
+  padding-bottom: 1%;
+}
+
+.play-steps {
+  font-size: 1.2rem;
+  list-style-position: inside;
+  padding: 2% 0 1% 2%;
+}
+
+.exmpl-wrapper {
+  background-color: #ebe6e6;
+  margin: 3% 0 0;
+  padding: 2% 3% 8%;
+}
+
+.example {
+  padding: 2% 0;
+}
+
+.code-exmpl {
+  background-color: #ffffff;
+  border-left: 0.4rem solid #ff896b;
+  padding: 3% 2.5%;
+}
 
 
+/* =============== FOOTER =============== */
 
+.copy {
+  color: #555555;
+  font-size: .9rem;
+  font-weight: 300;
+  margin: 3% 0;
+  text-align: center;
+}
